@@ -872,9 +872,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db88a9f9ef5a5f45a1c7c8c6bb3650f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _manager: {fileID: 2777622567341065091}
   _leftCubesCountText: {fileID: 1950698065}
   _timerText: {fileID: 1576037656}
+  _cubesCounter: {fileID: 1408582181}
+  _timer: {fileID: 341155535}
 --- !u!1 &799000657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,6 +1502,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400482586}
   m_CullTransparentMesh: 1
+--- !u!1 &1408582179
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1408582180}
+  - component: {fileID: 1408582181}
+  m_Layer: 0
+  m_Name: CubesCounter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1408582180
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408582179}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2020374290}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1408582181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1408582179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58efd488eaddc394fbe60b306e500340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1576037654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,11 +2403,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2777622567341065088}
   - {fileID: 1759902408528958797}
   - {fileID: 1534244293333170956}
   - {fileID: 3206119753717520219}
   - {fileID: 341155534}
+  - {fileID: 1408582180}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1534244293333170956
@@ -2458,59 +2503,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419b87f92d6a0b946bb7a1d21c87295e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cubePrototype: {fileID: 8688853431722551250, guid: 5242f120f60caa5439406d5fecff6951, type: 3}
+  _cubePrototype: {fileID: 8688853431722551251, guid: 5242f120f60caa5439406d5fecff6951, type: 3}
   _spawnArea: {fileID: 4103762913650123516}
-  _minCubesCount: 15
-  _maxCubesCount: 45
+  _minCubesCount: 10
+  _maxCubesCount: 20
   _areNewCubesColored: 1
-  _manager: {fileID: 2777622567341065091}
---- !u!4 &2777622567341065088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2777622567341065089}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2020374290}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2777622567341065089
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2777622567341065088}
-  - component: {fileID: 2777622567341065091}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2777622567341065091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2777622567341065089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5661f5cccceb8e14793dcd90f9540318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cubesCreator: {fileID: 1759902408528958798}
+  _cubesCounter: {fileID: 1408582181}
   _cubeSplitter: {fileID: 1534244293333170957}
-  _timer: {fileID: 341155535}
 --- !u!114 &3206119753717520214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7526,6 +7525,6 @@ SceneRoots:
   - {fileID: 1920256781}
   - {fileID: 705507995}
   - {fileID: 1795111069}
+  - {fileID: 2020374290}
   - {fileID: 785854645}
   - {fileID: 636151581}
-  - {fileID: 2020374290}

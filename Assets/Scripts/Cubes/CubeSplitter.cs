@@ -17,14 +17,53 @@ public class CubeSplitter : MonoBehaviour
     [Tooltip("А надо ли их вообще подрывать?")]
     [SerializeField] private bool _isExplodable;
 
-    private List<Vector3> GenerateSpawnPoints(GameObject parentCube)
+    private void OnValidate()
     {
-        List<Vector3> spawnPoints = new();
-        float step = parentCube.transform.localScale.x / 2;
-        float halfStep = step / 2;
-        Vector3 firstSpawnPoint = parentCube.transform.position - Vector3.one * halfStep;
-        Vector3 lastSpawnPoint = parentCube.transform.position + Vector3.one * halfStep;
+        if (_maxChildCubesCount < _minChildCubesCount)
+        {
+            _maxChildCubesCount = _minChildCubesCount;
+        }
+    }
 
+    public void OnCubeClicked(Cube parentCube)
+    {
+        int childCubesCount = Random.Range(_minChildCubesCount, _maxChildCubesCount + 1);
+        int randomIndexForSpawnPoint;
+        List<Vector3> spawnPoints = GenerateSpawnPoints(parentCube);
+        List<Cube> childCubes = new List<Cube>();
+
+        for (int i = 0; i < childCubesCount; i++)
+        {
+            if (spawnPoints.Count == 0)
+            {
+                break;
+            }
+
+            randomIndexForSpawnPoint = Random.Range(0, spawnPoints.Count);
+            childCubes.Add(_cubesCreator.CreateCube(parentCube, spawnPoints[randomIndexForSpawnPoint]));
+            spawnPoints.RemoveAt(randomIndexForSpawnPoint);
+        }
+
+        if (_isExplodable)
+        {
+            _explosion.ApplyExplosionForce(childCubes, parentCube.transform.position);
+        }
+
+        if (parentCube != null)
+        {
+            Destroy(parentCube.gameObject);
+        }
+    }
+
+    private List<Vector3> GenerateSpawnPoints(Cube parentCube)
+    {
+        float half = 0.5f;
+        float step = parentCube.gameObject.transform.localScale.x * half;
+        float halfStep = step * half;
+        Vector3 firstSpawnPoint = parentCube.gameObject.transform.position - Vector3.one * halfStep;
+        Vector3 lastSpawnPoint = parentCube.gameObject.transform.position + Vector3.one * halfStep;
+        List<Vector3> spawnPoints = new List<Vector3>();
+        
         for (float x = firstSpawnPoint.x; x <= lastSpawnPoint.x; x += step)
         {
             for (float y = firstSpawnPoint.y; y <= lastSpawnPoint.y; y += step)
@@ -37,40 +76,5 @@ public class CubeSplitter : MonoBehaviour
         }
 
         return spawnPoints;
-    }
-
-    private void OnValidate()
-    {
-        if (_maxChildCubesCount < _minChildCubesCount)
-        {
-            _maxChildCubesCount = _minChildCubesCount;
-        }
-    }
-
-    public void DoWork(GameObject parentCube)
-    {
-        int childCubesCount = Random.Range(_minChildCubesCount, _maxChildCubesCount + 1);
-        int randomIndexForSpawnPoint;
-        List<Vector3> spawnPoints = GenerateSpawnPoints(parentCube);
-        List<GameObject> childCubes = new();
-
-        for (int i = 0; i < childCubesCount; i++)
-        {
-            randomIndexForSpawnPoint = Random.Range(0, spawnPoints.Count);
-            childCubes.Add(_cubesCreator.CreateCube(parentCube, spawnPoints[randomIndexForSpawnPoint]));
-            spawnPoints.RemoveAt(randomIndexForSpawnPoint);
-
-            if (spawnPoints.Count == 0)
-            {
-                break;
-            }
-        }
-
-        if (_isExplodable)
-        {
-            _explosion.ApplyExplosionForce(childCubes, parentCube.transform.position);
-        }
-
-        Destroy(parentCube);
     }
 }

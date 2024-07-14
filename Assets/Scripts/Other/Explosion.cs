@@ -1,13 +1,15 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Explosion : MonoBehaviour
 {
-    [SerializeField] private float _force;
-    [SerializeField] private float _radius;
+    [Header("Настройки взрыва")]
+    [Tooltip("Силы взрыва")]
+    [SerializeField, Min(0f)] private float _force = 500f;
+    [Tooltip("Расстояние от центра, на котором действует сила взрыва")]
+    [SerializeField, Min(0f)] private float _radius = 3f;
 
-    public void ApplyExplosionForce(List<GameObject> appliedObjects, Vector3 explosionCenter)
+    public void ApplyExplosionForce(List<Cube> appliedObjects, Vector3 explosionCenter)
     {
         transform.position = explosionCenter;
 
@@ -16,9 +18,9 @@ public class Explosion : MonoBehaviour
             particleSystem.Play();
         }
 
-        foreach (GameObject appliedObject in appliedObjects)
+        foreach (Cube appliedObject in appliedObjects)
         {
-            if (appliedObject.TryGetComponent(out Rigidbody rigidbody))
+            if (appliedObject.gameObject.TryGetComponent(out Rigidbody rigidbody))
             {
                 rigidbody.AddExplosionForce(_force, explosionCenter, _radius);
             }
