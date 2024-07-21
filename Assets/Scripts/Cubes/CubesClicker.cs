@@ -38,8 +38,13 @@ public class CubesClicker : MonoBehaviour
                 {
                     if (Randomizer.IsSuccessed(cube.ChanceToSplit))
                     {
-                        List<Cube> childCubes = _cubesCreator.CreateChildCubes(cube);
-                        _explosion.ApplyExplosionForce(childCubes, cube.gameObject.transform.position);
+                        _cubesCreator.CreateChildCubes(cube);
+                    }
+                    else
+                    {
+                        float explosionModifier = 1 / cube.gameObject.transform.localScale.x;
+
+                        _explosion.Explode(cube.gameObject.transform.position, explosionModifier);
                     }
 
                     Destroy(cube.gameObject);

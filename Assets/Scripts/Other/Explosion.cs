@@ -9,8 +9,11 @@ public class Explosion : MonoBehaviour
     [Tooltip("Расстояние от центра, на котором действует сила взрыва")]
     [SerializeField, Min(0f)] private float _radius = 3f;
 
-    public void ApplyExplosionForce(List<Cube> appliedObjects, Vector3 explosionCenter)
+    public void Explode(Vector3 explosionCenter, float explosionModifier = 1f)
     {
+        float force = _force * explosionModifier;
+        float radius = _radius * explosionModifier;
+
         transform.position = explosionCenter;
 
         if (gameObject.TryGetComponent(out ParticleSystem particleSystem))
@@ -18,11 +21,13 @@ public class Explosion : MonoBehaviour
             particleSystem.Play();
         }
 
-        foreach (Cube appliedObject in appliedObjects)
+        Collider[] explodingObjects = Physics.OverlapSphere(transform.position, radius);
+
+        foreach (Collider explodingObject in explodingObjects)
         {
-            if (appliedObject.gameObject.TryGetComponent(out Rigidbody rigidbody))
+            if (explodingObject.gameObject.TryGetComponent(out Rigidbody rigidbody))
             {
-                rigidbody.AddExplosionForce(_force, explosionCenter, _radius);
+                rigidbody.AddExplosionForce(force, explosionCenter, radius);
             }
         }
     }

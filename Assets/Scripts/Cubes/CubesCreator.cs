@@ -52,12 +52,11 @@ public class CubesCreator : MonoBehaviour
         }
     }
 
-    public List<Cube> CreateChildCubes(Cube parentCube)
+    public void CreateChildCubes(Cube parentCube)
     {
         int childCubesCount = Random.Range(_minChildCubesCount, _maxChildCubesCount + 1);
         int randomSpawnPointIndex;
         List<Vector3> spawnPoints = GenerateSpawnPoints(parentCube);
-        List<Cube> childCubes = new ();
 
         for (int i = 0; i < childCubesCount; i++)
         {
@@ -67,16 +66,14 @@ public class CubesCreator : MonoBehaviour
             }
 
             randomSpawnPointIndex = Random.Range(0, spawnPoints.Count);
-            childCubes.Add(CreateCube(parentCube, spawnPoints[randomSpawnPointIndex]));
+            CreateCube(parentCube, spawnPoints[randomSpawnPointIndex]);
             spawnPoints.RemoveAt(randomSpawnPointIndex);
         }
 
         NewCubesCreated?.Invoke(childCubesCount);
-
-        return childCubes;
     }
 
-    private Cube CreateCube(Cube prototype, Vector3 spawnPoint)
+    private void CreateCube(Cube prototype, Vector3 spawnPoint)
     {
         int three = 3;
         float half = 0.5f;
@@ -92,8 +89,6 @@ public class CubesCreator : MonoBehaviour
         {
             childRigidBody.mass = parentRigidBody.mass * halfInThirdDegree;
         }
-
-        return newCube;
     }
 
     private void CreateOriginalCubes()

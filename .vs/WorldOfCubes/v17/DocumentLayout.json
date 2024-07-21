@@ -3,52 +3,16 @@
   "WorkspaceRootPath": "C:\\Unity Projects\\WorldOfCubes\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\cubes\\cubesclicker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|c:\\unity projects\\worldofcubes\\assets\\scripts\\cubes\\cubesclicker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cubes\\cubesclicker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|c:\\unity projects\\worldofcubes\\assets\\scripts\\ui\\viewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\viewer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\other\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\other\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\other\\randomizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\other\\randomizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\other\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|c:\\unity projects\\worldofcubes\\assets\\scripts\\other\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\other\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\other\\assistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\other\\assistant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\cubes\\cubescreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|c:\\unity projects\\worldofcubes\\assets\\scripts\\cubes\\cubescreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cubes\\cubescreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\cubes\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cubes\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\camera\\rotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera\\rotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\camera\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|C:\\Unity Projects\\WorldOfCubes\\assets\\scripts\\camera\\camerazooming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2B7A5F64-AFF9-EE17-C86B-BA2E60293B4F}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera\\camerazooming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\UI\\UI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\UI\\UI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,28 +26,28 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UI.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\UI\\UI.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UI.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\UI\\UI.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\UI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAATAAAA",
+              "DocumentIndex": 1,
+              "Title": "Explosion.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Explosion.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Other\\Explosion.cs",
+              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Explosion.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Other\\Explosion.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:44:49.73Z",
-              "IsPinned": true
+              "WhenOpened": "2024-07-21T19:03:05.694Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Viewer.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\UI\\Viewer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\Viewer.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\UI\\Viewer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\Viewer.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBMAAABBAAAA",
+              "DocumentIndex": 2,
+              "Title": "CubesCreator.cs",
+              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Cubes\\CubesCreator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Cubes\\CubesCreator.cs",
+              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Cubes\\CubesCreator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Cubes\\CubesCreator.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAcwFsAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-21T11:59:51.982Z",
+              "WhenOpened": "2024-07-21T19:01:54.113Z",
               "EditorCaption": ""
             },
             {
@@ -94,118 +58,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cubes\\CubesClicker.cs",
               "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Cubes\\CubesClicker.cs",
               "RelativeToolTip": "Assets\\Scripts\\Cubes\\CubesClicker.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAwwDsAAAAjAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAIwC4AAABgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-21T10:27:09.402Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Timer.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Timer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Other\\Timer.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Timer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Other\\Timer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:44:47.156Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Randomizer.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Randomizer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Other\\Randomizer.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Randomizer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Other\\Randomizer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:44:42.056Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Explosion.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Explosion.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Other\\Explosion.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Explosion.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Other\\Explosion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:44:39.952Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Assistant.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Assistant.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Other\\Assistant.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Other\\Assistant.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Other\\Assistant.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:44:35.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CubesCreator.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Cubes\\CubesCreator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Cubes\\CubesCreator.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Cubes\\CubesCreator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Cubes\\CubesCreator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH8AAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:44:25.822Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Cube.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Cubes\\Cube.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Cubes\\Cube.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Cubes\\Cube.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Cubes\\Cube.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:44:18.255Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Rotation.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Camera\\Rotation.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Camera\\Rotation.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Camera\\Rotation.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Camera\\Rotation.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:44:12.105Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Movement.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Camera\\Movement.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Camera\\Movement.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Camera\\Movement.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Camera\\Movement.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:44:03.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CameraZooming.cs",
-              "DocumentMoniker": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Camera\\CameraZooming.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Camera\\CameraZooming.cs",
-              "ToolTip": "C:\\Unity Projects\\WorldOfCubes\\Assets\\Scripts\\Camera\\CameraZooming.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Camera\\CameraZooming.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-17T18:43:53.595Z"
             }
           ]
         }

@@ -2490,8 +2490,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cubePrototype: {fileID: 8688853431722551251, guid: 5242f120f60caa5439406d5fecff6951, type: 3}
   _spawnArea: {fileID: 4103762913650123516}
-  _minCubesCount: 1
-  _maxCubesCount: 5
+  _minCubesCount: 10
+  _maxCubesCount: 25
   _areNewCubesColored: 1
   _minChildCubesCount: 2
   _maxChildCubesCount: 6
@@ -2507,7 +2507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcd215154ec9efa4999a08f14dbfb0bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _force: 500
+  _force: 100
   _radius: 3
 --- !u!199 &3206119753717520216
 ParticleSystemRenderer:
