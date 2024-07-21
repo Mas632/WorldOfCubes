@@ -874,8 +874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _leftCubesCountText: {fileID: 1950698065}
   _timerText: {fileID: 1576037656}
-  _cubesCounter: {fileID: 1408582181}
   _timer: {fileID: 341155535}
+  _cubesClicker: {fileID: 0}
 --- !u!1 &799000657
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,7 +1502,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400482586}
   m_CullTransparentMesh: 1
---- !u!1 &1408582179
+--- !u!1 &1457408789
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1510,22 +1510,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1408582180}
-  - component: {fileID: 1408582181}
+  - component: {fileID: 1457408790}
+  - component: {fileID: 1457408791}
   m_Layer: 0
-  m_Name: CubesCounter
+  m_Name: CubesClicker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1408582180
+--- !u!4 &1457408790
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408582179}
+  m_GameObject: {fileID: 1457408789}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -1534,18 +1534,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2020374290}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1408582181
+--- !u!114 &1457408791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408582179}
+  m_GameObject: {fileID: 1457408789}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58efd488eaddc394fbe60b306e500340, type: 3}
+  m_Script: {fileID: 11500000, guid: 2439755d72b3f7f47b29c3d728c1be55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _camera: {fileID: 963194227}
+  _cubesCreator: {fileID: 1759902408528958798}
+  _explosion: {fileID: 3206119753717520214}
 --- !u!1 &1576037654
 GameObject:
   m_ObjectHideFlags: 0
@@ -2403,62 +2406,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1457408790}
   - {fileID: 1759902408528958797}
-  - {fileID: 1534244293333170956}
   - {fileID: 3206119753717520219}
   - {fileID: 341155534}
-  - {fileID: 1408582180}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1534244293333170956
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534244293333170963}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2020374290}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1534244293333170957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534244293333170963}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb767671880ad442b64056c7b0d6663, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cubesCreator: {fileID: 1759902408528958798}
-  _minChildCubesCount: 2
-  _maxChildCubesCount: 6
-  _explosion: {fileID: 3206119753717520214}
-  _isExplodable: 1
---- !u!1 &1534244293333170963
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1534244293333170956}
-  - component: {fileID: 1534244293333170957}
-  m_Layer: 0
-  m_Name: CubeSplitter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1759902408528958796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,8 +2461,8 @@ MonoBehaviour:
   _minCubesCount: 10
   _maxCubesCount: 20
   _areNewCubesColored: 1
-  _cubesCounter: {fileID: 1408582181}
-  _cubeSplitter: {fileID: 1534244293333170957}
+  _minChildCubesCount: 2
+  _maxChildCubesCount: 6
 --- !u!114 &3206119753717520214
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CubesCreator : MonoBehaviour
 {
-    [Header("Настройки создания кубов")]
+    [Header("Настройки создания оригинальных кубов")]
     [Tooltip("Прототип, используемый для создания кубов")]
     [SerializeField] private Cube _cubePrototype;
     [Tooltip("Область пространста, в которой появляются создаваемые кубы")]
@@ -15,17 +16,24 @@ public class CubesCreator : MonoBehaviour
     [Tooltip("Делать новые кубики разноцветными?")]
     [SerializeField] private bool _areNewCubesColored;
 
-    [Space(25)]
-    [Tooltip("Объект, который умеет и любит считать кубики")]
-    [SerializeField] private CubesCounter _cubesCounter;
-    [Tooltip("Объект, который умеет и любит делить кубики на дочерние кубики")]
-    [SerializeField] private CubeSplitter _cubeSplitter;
+    [Header("Настройки создания дочерних кубов")]
+    [Tooltip("Минимальное количество дочерних кубов")]
+    [SerializeField, Range(1, 8)] private int _minChildCubesCount;
+    [Tooltip("Максимальное количество дочерних кубов")]
+    [SerializeField, Range(1, 8)] private int _maxChildCubesCount;
+
+    public event UnityAction<int> NewCubesCreated;
 
     private void OnValidate()
     {
         if (_maxCubesCount < _minCubesCount)
         {
             _maxCubesCount = _minCubesCount;
+        }
+
+        if (_maxChildCubesCount < _minChildCubesCount)
+        {
+            _maxChildCubesCount = _minChildCubesCount;
         }
     }
 
@@ -44,7 +52,31 @@ public class CubesCreator : MonoBehaviour
         }
     }
 
-    public Cube CreateCube(Cube prototype, Vector3 spawnPoint)
+    public List<Cube> CreateChildCubes(Cube parentCube)
+    {
+        int childCubesCount = Random.Range(_minChildCubesCount, _maxChildCubesCount + 1);
+        int randomSpawnPointIndex;
+        List<Vector3> spawnPoints = GenerateSpawnPoints(parentCube);
+        List<Cube> childCubes = new ();
+
+        for (int i = 0; i < childCubesCount; i++)
+        {
+            if (spawnPoints.Count == 0)
+            {
+                break;
+            }
+
+            randomSpawnPointIndex = Random.Range(0, spawnPoints.Count);
+            childCubes.Add(CreateCube(parentCube, spawnPoints[randomSpawnPointIndex]));
+            spawnPoints.RemoveAt(randomSpawnPointIndex);
+        }
+
+        NewCubesCreated?.Invoke(childCubesCount);
+
+        return childCubes;
+    }
+
+    private Cube CreateCube(Cube prototype, Vector3 spawnPoint)
     {
         int three = 3;
         float half = 0.5f;
@@ -53,8 +85,7 @@ public class CubesCreator : MonoBehaviour
         Cube newCube = Instantiate(prototype, spawnPoint, Quaternion.identity);
 
         newCube.transform.localScale = prototype.transform.localScale * half;
-
-        newCube.SetChanceToSplitByHalf(prototype.ChanceToSplit * half);
+        newCube.SetChanceToSplit(prototype.ChanceToSplit * half);
         SetRandomColorToCube(newCube);
 
         if (newCube.gameObject.TryGetComponent(out Rigidbody childRigidBody) && prototype.gameObject.TryGetComponent(out Rigidbody parentRigidBody))
@@ -62,22 +93,52 @@ public class CubesCreator : MonoBehaviour
             childRigidBody.mass = parentRigidBody.mass * halfInThirdDegree;
         }
 
-        CustomizeCube(newCube);
-
         return newCube;
     }
 
-    public List<Cube> CreateOriginalCubes()
+    private void CreateOriginalCubes()
     {
         int cubesCount = Random.Range(_minCubesCount, _maxCubesCount + 1);
-        List<Cube> _cubes = new List<Cube>();
 
         for (int i = 0; i < cubesCount; i++)
         {
-            _cubes.Add(CreateOriginalCube(Randomizer.GetPoint(_spawnArea)));
+            CreateOriginalCube(Randomizer.GetPoint(_spawnArea));
         }
 
-        return _cubes;
+        NewCubesCreated?.Invoke(cubesCount);
+    }
+
+    private void CreateOriginalCube(Vector3 spawnPoint)
+    {
+        Cube newOriginalCube = Instantiate(_cubePrototype, spawnPoint, Random.rotation);
+
+        if (_areNewCubesColored)
+        {
+            SetRandomColorToCube(newOriginalCube);
+        }
+    }
+
+    private List<Vector3> GenerateSpawnPoints(Cube parentCube)
+    {
+        float half = 0.5f;
+        float step = parentCube.gameObject.transform.localScale.x * half;
+        float halfStep = step * half;
+        Vector3 firstSpawnPoint = parentCube.gameObject.transform.position - Vector3.one * halfStep;
+        Vector3 lastSpawnPoint = parentCube.gameObject.transform.position + Vector3.one * halfStep;
+        List<Vector3> spawnPoints = new ();
+
+        for (float x = firstSpawnPoint.x; x <= lastSpawnPoint.x; x += step)
+        {
+            for (float y = firstSpawnPoint.y; y <= lastSpawnPoint.y; y += step)
+            {
+                for (float z = firstSpawnPoint.z; z <= lastSpawnPoint.z; z += step)
+                {
+                    spawnPoints.Add(new Vector3(x, y, z));
+                }
+            }
+        }
+
+        return spawnPoints;
     }
 
     private void SetRandomColorToCube(Cube cube)
@@ -86,26 +147,5 @@ public class CubesCreator : MonoBehaviour
         {
             renderer.material.color = Randomizer.GetColor();
         }
-    }
-
-    private void CustomizeCube(Cube cube)
-    {
-        cube.Created += _cubesCounter.IncrementCubesCount;
-        cube.Destroyed += _cubesCounter.DecrementCubesCount;
-        cube.SuccessedCliked += _cubeSplitter.OnCubeClicked;
-    }
-
-    private Cube CreateOriginalCube(Vector3 spawnPoint)
-    {
-        Cube newOriginalCube = Instantiate(_cubePrototype, spawnPoint, Random.rotation);
-
-        if (_areNewCubesColored)
-        {
-            SetRandomColorToCube(newOriginalCube);
-        }
-
-        CustomizeCube(newOriginalCube);
-
-        return newOriginalCube;
     }
 }

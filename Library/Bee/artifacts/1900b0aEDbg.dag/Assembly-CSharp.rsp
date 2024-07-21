@@ -356,14 +356,13 @@
 "Assets/Scripts/Camera/Movement.cs"
 "Assets/Scripts/Camera/Rotation.cs"
 "Assets/Scripts/Cubes/Cube.cs"
-"Assets/Scripts/Cubes/CubesCounter.cs"
+"Assets/Scripts/Cubes/CubesClicker.cs"
 "Assets/Scripts/Cubes/CubesCreator.cs"
-"Assets/Scripts/Cubes/CubeSplitter.cs"
 "Assets/Scripts/Other/Assistant.cs"
 "Assets/Scripts/Other/Explosion.cs"
 "Assets/Scripts/Other/Randomizer.cs"
 "Assets/Scripts/Other/Timer.cs"
-"Assets/Scripts/UI/UI.cs"
+"Assets/Scripts/UI/Viewer.cs"
 -langversion:9.0
 /deterministic
 /optimize-

@@ -64,13 +64,12 @@
     <Compile Include="Assets\Scripts\Cubes\CubesCreator.cs" />
     <Compile Include="Assets\Scripts\Other\Randomizer.cs" />
     <Compile Include="Assets\Scripts\Camera\Rotation.cs" />
+    <Compile Include="Assets\Scripts\UI\Viewer.cs" />
+    <Compile Include="Assets\Scripts\Cubes\CubesClicker.cs" />
     <Compile Include="Assets\Scripts\Other\Timer.cs" />
-    <Compile Include="Assets\Scripts\UI\UI.cs" />
-    <Compile Include="Assets\Scripts\Cubes\CubeSplitter.cs" />
     <Compile Include="Assets\Scripts\Cubes\Cube.cs" />
     <Compile Include="Assets\Scripts\Other\Explosion.cs" />
     <Compile Include="Assets\Scripts\Camera\Movement.cs" />
-    <Compile Include="Assets\Scripts\Cubes\CubesCounter.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraZooming.cs" />
   </ItemGroup>
   <ItemGroup>
