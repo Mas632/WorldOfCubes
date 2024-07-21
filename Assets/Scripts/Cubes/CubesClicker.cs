@@ -9,7 +9,7 @@ public class CubesClicker : MonoBehaviour
     [Tooltip("Взрыв для разброса дочерних кубов")]
     [SerializeField] private Explosion _explosion;
 
-    int cubesCount = 0;
+    private int _cubesCount = 0;
 
     public event UnityAction<int> CubesCountChanged;
 
@@ -43,14 +43,20 @@ public class CubesClicker : MonoBehaviour
                     }
 
                     Destroy(cube.gameObject);
+                    IncreaseCubesCount(-1);
                 }
             }
         }
     }
 
+    private void OnDisable()
+    {
+        _cubesCreator.NewCubesCreated -= IncreaseCubesCount;
+    }
+
     private void IncreaseCubesCount(int value)
     {
-        cubesCount += value;
-        CubesCountChanged?.Invoke(cubesCount);
+        _cubesCount += value;
+        CubesCountChanged?.Invoke(_cubesCount);
     }
 }
