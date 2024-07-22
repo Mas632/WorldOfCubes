@@ -38,17 +38,19 @@ public class CubesClicker : MonoBehaviour
                 {
                     if (Randomizer.IsSuccessed(cube.ChanceToSplit))
                     {
-                        _cubesCreator.CreateChildCubes(cube);
+                        List<Cube> childCubes = _cubesCreator.CreateChildCubes(cube);
+
+                        _explosion.ExplodeCubes(cube.gameObject.transform.position, childCubes);
                     }
                     else
                     {
                         float explosionModifier = 1 / cube.gameObject.transform.localScale.x;
 
-                        _explosion.Explode(cube.gameObject.transform.position, explosionModifier);
+                        _explosion.ExplodeAround(cube.gameObject.transform.position, explosionModifier);
                     }
 
                     Destroy(cube.gameObject);
-                    IncreaseCubesCount(-1);
+                    DecreaseCubesCount();
                 }
             }
         }
@@ -59,9 +61,15 @@ public class CubesClicker : MonoBehaviour
         _cubesCreator.NewCubesCreated -= IncreaseCubesCount;
     }
 
-    private void IncreaseCubesCount(int value)
+    private void IncreaseCubesCount(int value = 1)
     {
         _cubesCount += value;
+        CubesCountChanged?.Invoke(_cubesCount);
+    }
+
+    private void DecreaseCubesCount(int value = 1)
+    {
+        _cubesCount -= value;
         CubesCountChanged?.Invoke(_cubesCount);
     }
 }
